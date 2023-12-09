@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+theme=style-2
+dir="$HOME/.config/rofi/launchers/type-4"
+## Run
+all_sinks=$(pactl list short sinks | cut -f 2)
+#for language support... meh
+def_sink_string="Domyślny odpływ"
+default_sink=$(pactl info | grep "$def_sink_string" | cut -d : -f 2 | xargs)
+echo $default_sink
+active_sink=$(echo "$all_sinks" | grep -n $default_sink | cut -d : -f 1)
+echo $active_sink
+
+selected_sink=$(echo "$all_sinks" | rofi -dmenu -i -a $(($active_sink -1)) -p 'Select a device: ' -theme ${dir}/${theme}.rasi )
+
+pactl set-default-sink $selected_sink
