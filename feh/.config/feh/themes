@@ -1,0 +1,7 @@
+feh -B black \
+-rV \
+-d \
+-N \
+--scale-down \
+--auto-zoom \
+--no-fehbg
