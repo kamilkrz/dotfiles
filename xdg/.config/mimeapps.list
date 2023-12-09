@@ -1,0 +1,5 @@
+[Default Applications]
+x-scheme-handler/etcher=balena-etcher.desktop
+inode/directory=thunar.desktop
+image/jpeg=feh.desktop
+

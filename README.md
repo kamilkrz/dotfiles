@@ -1,6 +1,7 @@
 
 
-
+# Dotfiles
+Before github only my family knew that I have a problem with dotfiles. Now you know it too.
 
 ## Greenclip
 https://github.com/erebe/greenclip
